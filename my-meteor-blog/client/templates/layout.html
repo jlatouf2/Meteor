@@ -1,0 +1,42 @@
+<template name="layout">
+	<header>
+		<div class="container">
+			<h1>My Meteor Single Page App</h1>
+			<ul>
+				<li>
+					<a href="/">Home</a>
+				</li>
+				<li>
+					<a href="/about">About</a>
+				</li>
+				<li>
+					<a href="/newpage">New Page</a>
+				</li>
+
+			</ul>
+		</div>
+	</header>
+			<!-- HOME IS ALWAYS DISPLAYED HERE B/C THE APP HAS NOW ROUTING SYSTEM SO WHEN YO SELECT
+				ABOUT OR NEW PAGE IT ONLY DISPLAYS THE HOME TEMPLATE, NOT ABOUT/NEWPAGE TEMPLAGE -->
+				<!-- THE <template name="contextExample">    AND      Template.contextExample.rendered = function(){
+ ARE HOW THE APPS AND THE JAVASCRIPT CODE FOR FUNCTIONS WORK.....SEE HOW THEY BOTH ARE CONTEXTEXAMPLE -->
+
+	<div class="container">
+		<main>
+			{{> yield}}
+		</main>
+	</div>
+</template>
+
+ <template name="notFound">
+         <div class="center">
+           <h1>Nothing here</h1><br>
+           <h2>You hit a page which doesn't exist!</h2>
+         </div>
+</template>
+
+<template name="loading">
+	<div class="center">
+		<h1>Loading</h1>
+	</div>
+</template>
